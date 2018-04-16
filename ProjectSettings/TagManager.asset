@@ -4,18 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ghost0
-  - Ghost1
-  - Ghost2
-  - Ghost3
-  - Ghost4
-  - Ghost5
-  - Ghost6
-  - Ghost7
   - Ball
-  - Peg
-  - OldPeg
-  - Test
+  - Laser
   layers:
   - Default
   - TransparentFX
