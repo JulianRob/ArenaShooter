@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ghost0
+  - Ghost1
+  - Ghost2
+  - Ghost3
+  - Ghost4
+  - Ghost5
+  - Ghost6
+  - Ghost7
+  - Ball
+  - Peg
+  - OldPeg
+  - Test
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ball
+  - Peg
+  - OldPeg
+  - Test
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 565803781
+    locked: 1
+  - name: Objects
+    uniqueID: 3273560055
+    locked: 0
+  - name: Player
+    uniqueID: 2820486287
+    locked: 0
