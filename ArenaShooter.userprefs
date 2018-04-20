@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Plasma.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ball.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="92" Column="62" />
-      <File FileName="Assets/Scripts/Ball.cs" Line="68" Column="18" />
-      <File FileName="Assets/Scripts/Laser.cs" Line="54" Column="49" />
+      <File FileName="Assets/Scripts/Player.cs" Line="83" Column="4" />
+      <File FileName="Assets/Scripts/Ball.cs" Line="123" Column="147" />
+      <File FileName="Assets/Scripts/Laser.cs" Line="55" Column="4" />
       <File FileName="Assets/Scripts/Level1.cs" Line="29" Column="11" />
-      <File FileName="Assets/Scripts/Plasma.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/Plasma.cs" Line="25" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

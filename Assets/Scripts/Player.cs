@@ -42,20 +42,20 @@ public class Player : MonoBehaviour {
 		//*********FOR KEYBOARD ONLY
 
 		//MOVEMENT + DIRECTION
-		if (Input.GetKey ("w")) {
+		if (Input.GetKey ("w") && transform.position.y <= 4f) {
 			yDirection = 0.25f;
 			transform.eulerAngles = new Vector3 (0, 0, 0);
-		} else if (Input.GetKey ("s")) {
+		} else if (Input.GetKey ("s") && transform.position.y >= -4f) {
 			yDirection = -0.25f;
 			transform.eulerAngles = new Vector3 (0, 0, 180);
 		} else {
 			yDirection = 0;
 		}
 
-		if (Input.GetKey ("d")) {
+		if (Input.GetKey ("d") && transform.position.x <= 8f) {
 			xDirection = 0.25f;
 			transform.eulerAngles = new Vector3 (0, 0, -90);
-		} else if (Input.GetKey ("a")) {
+		} else if (Input.GetKey ("a") && transform.position.x >= -8f) {
 			transform.eulerAngles = new Vector3 (0, 0, 90);
 			xDirection = -0.25f;
 		} else {
@@ -93,6 +93,46 @@ public class Player : MonoBehaviour {
 			count2 = 10;
 		}
 
+		if (Input.GetKey (KeyCode.UpArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, 0);
+		}
+
+		if (Input.GetKey (KeyCode.DownArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, 180);
+		}
+
+		if (Input.GetKey (KeyCode.RightArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, -90);
+		}
+
+		if (Input.GetKey (KeyCode.LeftArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, 90);
+		}
+
+		if (Input.GetKey (KeyCode.UpArrow) && Input.GetKey (KeyCode.RightArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, -45);
+		}
+
+		if (Input.GetKey (KeyCode.UpArrow) && Input.GetKey (KeyCode.LeftArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, 45);
+		}
+
+		if (Input.GetKey (KeyCode.LeftArrow) && Input.GetKey (KeyCode.DownArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, 135);
+		}
+
+		if (Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.RightArrow)) 
+		{
+			transform.eulerAngles = new Vector3 (0, 0, -135);
+		}
+			
 		if (count2 > 0) 
 		{
 			count2 -= 1;

@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour {
 	private float distance;
 	private float distance2;
 
+	private float stretch = 1.5f;
+
 	void Start()
 	{
 		initialPosition = transform.position;
@@ -73,5 +75,113 @@ public class Ball : MonoBehaviour {
 			xdistance = 0;
 			ydistance = 0;
 		}
+
+		//*********FOR KEYBOARD ONLY
+		if (rb.position.x <= 0) 
+		{
+			if (Input.GetKey ("w") || Input.GetKey ("d") || Input.GetKey ("s") || Input.GetKey ("a")) 
+			{
+				rb.isKinematic = true;
+
+				if (Input.GetKey ("w")) 
+				{
+					rb.position = new Vector2 (initialPosition.x, initialPosition.y + stretch);
+				} 
+
+				if (Input.GetKey ("s")) 
+				{
+					rb.position = new Vector2 (initialPosition.x, initialPosition.y - stretch);
+				} 
+
+				if (Input.GetKey ("d"))
+				{
+					rb.position = new Vector2 (initialPosition.x+stretch, initialPosition.y);
+				}
+
+				if (Input.GetKey ("a")) 
+				{
+					rb.position = new Vector2 (initialPosition.x-stretch, initialPosition.y);
+				} 
+
+				if (Input.GetKey ("w") && Input.GetKey ("d")) 
+				{
+					rb.position = new Vector2 (initialPosition.x + Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y + Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey ("w") && Input.GetKey ("a")) 
+				{
+					rb.position = new Vector2 (initialPosition.x - Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y + Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey ("a") && Input.GetKey ("s")) 
+				{
+					rb.position = new Vector2 (initialPosition.x - Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y - Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey ("s") && Input.GetKey ("d")) 
+				{
+					rb.position = new Vector2 (initialPosition.x + Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y - Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+			} 
+			else 
+			{
+				rb.isKinematic = false;
+			}
+		}
+
+		if (rb.position.x >= 0) 
+		{
+			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.LeftArrow)) 
+			{
+				rb.isKinematic = true;
+
+				if (Input.GetKey (KeyCode.UpArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x, initialPosition.y + stretch);
+				}
+
+				if (Input.GetKey (KeyCode.DownArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x, initialPosition.y - stretch);
+				}
+
+				if (Input.GetKey (KeyCode.RightArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x+stretch, initialPosition.y);
+				}
+
+				if (Input.GetKey (KeyCode.LeftArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x-stretch, initialPosition.y);
+				}
+
+				if (Input.GetKey (KeyCode.UpArrow) && Input.GetKey (KeyCode.RightArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x + Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y + Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey (KeyCode.UpArrow) && Input.GetKey (KeyCode.LeftArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x - Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y + Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey (KeyCode.LeftArrow) && Input.GetKey (KeyCode.DownArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x - Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y - Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+				if (Input.GetKey (KeyCode.DownArrow) && Input.GetKey (KeyCode.RightArrow)) 
+				{
+					rb.position = new Vector2 (initialPosition.x + Mathf.Cos(Mathf.Deg2Rad*45)*stretch, initialPosition.y - Mathf.Sin(Mathf.Deg2Rad*45)*stretch);
+				}
+
+			} 
+			else 
+			{
+				rb.isKinematic = false;
+			}
+		}
+		//*********FOR KEYBOARD ONLY
 	}
 }

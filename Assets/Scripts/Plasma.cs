@@ -22,6 +22,7 @@ public class Plasma : MonoBehaviour {
 	{
 		if (other.CompareTag ("Laser"))
 		{
+			Destroy(other.gameObject);
 			Destroy(gameObject);
 		}
 	}
